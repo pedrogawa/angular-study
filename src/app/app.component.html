@@ -1,0 +1,19 @@
+<main class="main-container">
+  <section class="header">Angular todo app</section>
+  <section class="middle">
+    <div class="input-container">
+      <label for="">Todo:</label>
+      <input type="text" [(ngModel)]="todoInputValue" />
+    </div>
+    <button (click)="showValue()">Add todo</button>
+  </section>
+  <section class="todo-container">
+    <ul>
+      <li *ngFor="let todo of todos">{{ todo.title }}
+        <button (click)="deleteTodo(todo.id)">Delete</button>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<router-outlet></router-outlet>
