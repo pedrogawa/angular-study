@@ -1,13 +1,12 @@
-* {
-  margin: 0;
-}
-
 .main-container {
   display: grid;
-  padding: 16px;
   justify-content: center;
   grid-template-rows: 1fr 1fr 3fr;
+  grid-template-columns: 30%;
   grid-gap: 16px;
+  height: 100vh;
+  padding: 16px;
+  background-color: #F0EFF4
 
 
 }
@@ -18,4 +17,43 @@
   grid-gap: 8px;
   justify-items: start;
   justify-content: center;
+}
+
+.todo-container {
+  display: grid;
+  background-color: #fff;
+  grid-template-rows: 10% auto;
+  grid-gap: 24px;
+  border-radius: 8px;
+  max-height: 90%;
+  padding: 16px;
+}
+
+.todo-content {
+  display: grid;
+  grid-template-columns: 10% 3fr 1fr;
+  justify-items: start;
+  border-bottom: 1px solid grey
+
+
+}
+
+.delete-todo {
+  cursor: pointer;
+  justify-self: end;
+  border: none;
+  background-color: #fff;
+  color: #89cff0;
+  transition: 0.2s ease-in-out;
+
+
+  &:hover {
+    color: #26619c;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.todo-completed {
+  text-decoration: line-through;
+  color: #26619c;
 }

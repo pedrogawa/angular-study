@@ -8,10 +8,13 @@
     <button (click)="showValue()">Add todo</button>
   </section>
   <section class="todo-container">
+    <h2>Tasks</h2>
     <ul>
-      <li *ngFor="let todo of todos">{{ todo.title }}
-        <button (click)="deleteTodo(todo.id)">Delete</button>
-      </li>
+      <ol *ngFor="let todo of todos" class="todo-content" [ngClass]="{'todo-completed': todo.checked}">
+        <input type="checkbox" [(ngModel)]="todo.checked" />
+        <span>{{todo.title}}</span>
+        <button class="delete-todo" (click)="deleteTodo(todo.id)">Delete</button>
+      </ol>
     </ul>
   </section>
 </main>
