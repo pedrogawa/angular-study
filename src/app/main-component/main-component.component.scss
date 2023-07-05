@@ -1,0 +1,82 @@
+.main-container {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-columns: 80%;
+  grid-gap: 16px;
+  height: 100vh;
+  padding: 16px;
+  background-color: #9DB2BF;
+}
+
+.users-container {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  -webkit-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.21);
+  -moz-box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.21);
+  box-shadow: 6px 10px 5px 0px rgba(0,0,0,0.21);
+}
+
+.user-content {
+  padding: 16px;
+}
+
+.header {
+  padding: 16px;
+  border-radius: 8px 8px 0 0;
+  background-color: #27374D;
+  > h2 {
+    color: #ffffff;
+  }
+}
+
+.user-table {
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 16px;
+
+  > table {
+    width: 100%;
+  }
+}
+
+.table-head > th {
+  text-align: start;
+}
+
+.table-head > th:first-child {
+  padding-right: 8px;
+}
+
+
+
+.button {
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  transition: 0.3s;
+  padding: 8px;
+
+
+}
+
+.edit {
+  background-color: #7895CB;
+  &:hover {
+    background-color: #4A55A2;
+  }
+}
+
+.remove {
+  background-color: #E64848;
+  &:hover {
+    background-color: #C21010;
+  }
+}
+
+.table-info > td:last-child {
+  align-self: center;
+}
